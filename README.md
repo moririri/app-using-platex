@@ -15,6 +15,6 @@ make
 
 # 参考
 
-LATEX & PostScript スーパユーザのテクニック, 共立出版, 寒川 光
+LATEX & PostScript スーパユーザのテクニック、 共立出版、 寒川 光
 
 
