@@ -15,7 +15,8 @@ Linux環境だとテストまだしてないので、バグあるかもしれな
 sudo apt install -y texlive-lang-japanese pythontex
 ```
 
-PythonTeXを使うためのパッケージ、およびTeXファイル内でコールしているPythonモジュールを
+PythonTeXを使うためのパッケージ、
+およびTeXファイル内でコールしているPythonモジュールを
 インストールする。
 ```
 pip3 install Pygments numpy matplotlib
