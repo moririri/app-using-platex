@@ -1,0 +1,67 @@
+\documentclass[dvipdfmx,slide,papersize,a4j]{jsarticle}
+\usepackage[dvipdfmx]{graphicx}
+%\usepackage{mediabb}
+\usepackage{pythontex}
+\usepackage{here}
+
+\title{グラフのサンプル}
+\author{moririri}
+
+\begin{document}
+
+\maketitle
+
+\begin{sympycode}
+# -*- coding: shift_jis -*-
+
+import matplotlib.pyplot as plt
+import numpy as np
+import math
+
+def draw_func(x, y, name):
+    plt.figure(figsize=(10, 7))
+    plt.plot(x, y)
+    plt.savefig(name + ".pdf")
+
+def f(x, num):
+    if num==1:
+        return math.pow(x, 2)
+    if num==2:
+        return math.pow(x, 3)
+    if num==3:
+        return math.pow(x, 4)
+
+def main():
+    print(r"\section{グラフのサンプル}")
+    #print(r"\begin{center}")
+    print(r"グラフのサンプル、次のページから。")
+    #print(r"\end{center}")
+    print(r"\newpage")
+    output = r"""
+    \subsection{グラフのサンプル}
+    \begin{figure}[H]
+    \centering
+    \includegraphics[width=5cm]{./FILENAME}
+    %\caption{グラフのサンプル}
+    \end{figure}
+    \newpage
+    """
+
+    draw_lst=["2", "3", "4"]
+    cnt=0
+    for j in draw_lst:
+        x=[]
+        y=[]
+        cnt=cnt+1
+        for i in range(-100, 100):
+            x.append(i)
+            y.append(f(i, cnt))
+        draw_func(x, y, j)
+        print(output.replace("FILENAME", j+".pdf"))
+        
+if __name__=="__main__":
+    main()
+        
+\end{sympycode}
+
+\end{document}
