@@ -12,7 +12,8 @@ Linux環境だとテストまだしてないので、バグあるかもしれな
 
 パッケージインストール（例）
 ```
-sudo apt install -y texlive-lang-japanese pythontex
+sudo apt update
+sudo apt install -y python3 python3-pip texlive-lang-japanese texlive-extra-utils
 ```
 
 PythonTeXを使うためのパッケージ、
